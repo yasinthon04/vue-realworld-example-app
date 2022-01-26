@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: check out the code to build server
         uses: actions/checkout@v2
-      
+      - name: setup nodes
+        uses: actions/setup-node@v2
+          with:
+            node-version: '14'
       - name: build the code      
         run: | 
           yarn install
